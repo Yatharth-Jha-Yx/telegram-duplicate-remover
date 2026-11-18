@@ -1,0 +1,18 @@
+name = "telegram-dedupe-bot"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+
+[vars]
+# Optional: comma-separated chat IDs the bot may act in. Empty = any group it is admin in.
+ALLOWED_CHAT_IDS = ""
+# Post "Removed a duplicate: ..." in the group after each deletion. "false" turns it off.
+NOTIFY = "true"
+
+# Continue history scans in small batches, once a minute.
+[triggers]
+crons = ["* * * * *"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "telegram-dedupe"
+database_id = "REPLACE_WITH_YOUR_DATABASE_ID"

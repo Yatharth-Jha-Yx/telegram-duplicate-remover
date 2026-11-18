@@ -1,0 +1,15 @@
+# Telegram logins (Telethon session files) - never commit these
+*.session
+*.session-journal
+
+# Output of telegram_dedupe.py (contains your group's message IDs and file hashes)
+seed.sql
+hash_cache.json
+dedupe_report.csv
+
+# Local secrets and tooling
+.dev.vars
+.env
+node_modules/
+.wrangler/
+__pycache__/
